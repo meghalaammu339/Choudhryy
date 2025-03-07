@@ -3,26 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <title>Happy Birthday, My Love!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Parisienne&display=swap" rel="stylesheet">
     <style>
         body {
             text-align: center;
             background: url('background.jpg') no-repeat center center fixed;
             background-size: cover;
-            font-family: 'Dancing Script', cursive;
+            font-family: 'Parisienne', cursive;
             color: white;
+            margin: 0;
+            padding: 0;
         }
-        h1 {
-            margin-top: 50px;
+        header {
             font-size: 3em;
+            padding: 50px;
+            text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
             animation: fadeIn 2s ease-in-out;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        section {
+            margin: 50px auto;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
         }
         .quote {
-            font-size: 1.5em;
-            margin: 20px;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+            font-size: 1.8em;
+            font-style: italic;
         }
         .gallery {
             display: flex;
@@ -34,22 +43,18 @@
         .gallery img {
             width: 200px;
             height: 200px;
-            border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            border-radius: 15px;
+            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
         }
         .message {
             display: none;
-            font-size: 1.5em;
-            margin-top: 20px;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+            font-size: 1.8em;
+            font-style: italic;
+            color: #ffddff;
         }
         .btn {
             margin-top: 20px;
-            padding: 15px 30px;
+            padding: 15px 40px;
             font-size: 1.5em;
             border: none;
             border-radius: 25px;
@@ -63,20 +68,29 @@
             background: #d81b60;
             transform: scale(1.1);
         }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
     </style>
 </head>
 <body>
-    <h1>Happy Birthday, My Love!💚😘</h1>
-    <p class="quote">"You are my sunshine on a rainy day, my joy, my love. Happy Birthday!"</p>
+    <header>Happy Birthday, My Love! 🎉❤️</header>
     
-    <div class="gallery">
+    <section>
+        <p class="quote">"Every moment with you is magical. You are my forever love. Happy Birthday!"</p>
+    </section>
+    
+    <section class="gallery">
         <img src="photo1.jpg" alt="Happy Memory">
         <img src="photo2.jpg" alt="Happy Memory">
         <img src="photo3.jpg" alt="Happy Memory">
-    </div>
+    </section>
     
-    <button class="btn" onclick="showMessage()">Click Me 💖</button>
-    <p id="hiddenMessage" class="message">You are the best thing that ever happened to me! Love you forever! 💕</p>
+    <section>
+        <button class="btn" onclick="showMessage()">Click for a Surprise 💖</button>
+        <p id="hiddenMessage" class="message">You are my heart, my soul, my everything. I love you forever! 💕</p>
+    </section>
     
     <audio autoplay loop>
         <source src="music.mp3" type="audio/mp3">
