@@ -4,69 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday, My Love!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
         body {
             text-align: center;
-            background: url('background.jpg') no-repeat center center fixed;
-            background-size: cover;
-            font-family: 'Parisienne', cursive;
-            color: white;
+            background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+            font-family: 'Great Vibes', cursive;
+            color: black;
             margin: 0;
             padding: 0;
         }
         header {
-            font-size: 3em;
+            font-size: 4em;
             padding: 50px;
-            text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
             animation: fadeIn 2s ease-in-out;
         }
         section {
             margin: 50px auto;
-            max-width: 800px;
-            background: rgba(255, 255, 255, 0.1);
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.3);
             padding: 30px;
-            border-radius: 15px;
-            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
         }
         .quote {
-            font-size: 1.8em;
+            font-size: 2em;
             font-style: italic;
+            font-weight: bold;
         }
         .gallery {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 15px;
             margin-top: 20px;
         }
         .gallery img {
-            width: 200px;
-            height: 200px;
-            border-radius: 15px;
-            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+            width: 250px;
+            height: 250px;
+            border-radius: 20px;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
         }
         .message {
             display: none;
-            font-size: 1.8em;
-            font-style: italic;
-            color: #ffddff;
+            font-size: 2em;
+            font-weight: bold;
+            color: #d81b60;
+            animation: fadeIn 1.5s;
         }
         .btn {
             margin-top: 20px;
             padding: 15px 40px;
-            font-size: 1.5em;
+            font-size: 1.8em;
+            font-family: 'Dancing Script', cursive;
             border: none;
-            border-radius: 25px;
+            border-radius: 30px;
             background: #ff4081;
             color: white;
             cursor: pointer;
             transition: 0.3s;
-            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
         }
         .btn:hover {
             background: #d81b60;
             transform: scale(1.1);
+            box-shadow: 0px 0px 20px rgba(255, 0, 150, 0.8);
         }
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -78,7 +85,7 @@
     <header>Happy Birthday, My Love! 🎉❤️</header>
     
     <section>
-        <p class="quote">"Every moment with you is magical. You are my forever love. Happy Birthday!"</p>
+        <p class="quote">"You are the reason my heart beats with joy. Happy Birthday, my soulmate!"</p>
     </section>
     
     <section class="gallery">
@@ -89,17 +96,28 @@
     
     <section>
         <button class="btn" onclick="showMessage()">Click for a Surprise 💖</button>
-        <p id="hiddenMessage" class="message">You are my heart, my soul, my everything. I love you forever! 💕</p>
+        <p id="hiddenMessage" class="message">My love for you grows stronger every day. You are my everything! 💕</p>
     </section>
     
-    <audio autoplay loop>
-        <source src="music.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
+    <section>
+        <button class="btn" onclick="showAnotherSurprise()">Another Surprise 🎁</button>
+        <p id="anotherMessage" class="message" style="display:none;">You make my world brighter and my heart warmer! 🌟💖</p>
+    </section>
+    
+    <section>
+        <button class="btn" onclick="playMusic()">Play a Special Song 🎶</button>
+        <audio id="birthdaySong" src="special-song.mp3"></audio>
+    </section>
     
     <script>
         function showMessage() {
             document.getElementById("hiddenMessage").style.display = "block";
+        }
+        function showAnotherSurprise() {
+            document.getElementById("anotherMessage").style.display = "block";
+        }
+        function playMusic() {
+            document.getElementById("birthdaySong").play();
         }
     </script>
 </body>
